@@ -97,6 +97,10 @@ You will construct a language with the following features:
 -   [ ] Provide a writeup describing your language and its capabalities
     -   [ ] Justify any specific design decisions you made
 
+## Updated instructions
+The instructions will be updated with daily agendas as the class progresses.
+You may refer to the latest version of the assignment at https://github.com/infiniterik/byol.
+    
 ## Friday, September 16
 
 By Friday you should be ready to describe your syntax. Write a few
