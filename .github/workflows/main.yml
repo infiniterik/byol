@@ -10,13 +10,7 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
+  test-grammar:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
@@ -27,5 +21,12 @@ jobs:
           cache: 'pip'
       - name: Install Dependencies
         run: pip install -r requirements.txt
-      - name: Run basic test
-        run: pygrun parse calc.g4 prog test.txt
+      - name: Run parsing test
+        run: |
+             for f in tests/*.txt
+               do
+                cat $f
+                echo "AST> "
+                pygrun parse calc.g4 prog $f
+                echo "---------------------"
+              done
