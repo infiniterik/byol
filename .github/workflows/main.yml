@@ -31,3 +31,7 @@ jobs:
                 pygrun parse calc.g4 prog $f
                 echo "---------------------"
               done
+      - name: Run user code
+        run: python user.py
+      - name: Run full language tests
+        run: python run.py
