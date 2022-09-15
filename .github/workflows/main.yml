@@ -10,7 +10,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  build:
+jobs:
+  test-grammar:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
